@@ -37,6 +37,16 @@ while keepGoing:
             s = int(firstSet[i])%int(div)
             if secondSet[s] == 0:
                 secondSet[s] = firstSet[i]
+            else:
+                j = int(secondSet[s])
+                for j in range(len(secondSet)):
+                    if j == len(secondSet):
+                        j = 0
+                    if secondSet[j] != 0:
+                        j += 1
+                    else:
+                        secondSet[j] = firstSet[j]
+                        print (secondSet)
 
     # Second option || Pseudorandom number generator
     if option == "2":
@@ -53,7 +63,7 @@ while keepGoing:
                 randomNumbers[i] = ((randomNumbers[i - 1] * a) + c) % m
         
         # Output quantity
-        numbersQuantity = 5
+        numbersQuantity = 20
         randomNumbers = [0] * (numbersQuantity)
         pseudorandomNumberGenerator(s, m, a, c, randomNumbers, numbersQuantity)
 
