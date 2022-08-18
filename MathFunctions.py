@@ -39,15 +39,18 @@ while keepGoing:
         c = int(input("Enter the increase value (c): "))
         s = int(input("Enter the seed value (s), it must be ≤0: "))
         print ("\n")
-        def pseudorandomNumberGenerator(s, m, a, c, randomNums, numberOfRandoms):
-            randomNums[0] = s
-            numberOfRandoms = 5
-            randomNums = [0] * (numberOfRandoms)
-            for i in range(1, numberOfRandoms):
-                randomNums[i] = ((randomNums[i - 1] * a) + c) % m
-                pseudorandomNumberGenerator(s, m, a, c, randomNums, numberOfRandoms)
-            for i in randomNums:
-		        print(i, end = " ")
 
-else:
-    print("\nERROR: Please type a valid option.")
+        def pseudorandomNumberGenerator(s, m, a, c, randomNumbers, numbersQuantity):
+            randomNumbers[0] = s
+            for i in range(1, numbersQuantity):
+                randomNumbers[i] = ((randomNumbers[i - 1] * a) + c) % m
+        
+        numbersQuantity = 5
+        randomNumbers = [0] * (numbersQuantity)
+        pseudorandomNumberGenerator(s, m, a, c, randomNumbers, numbersQuantity)
+ 
+        for i in randomNumbers:
+            print(i, end = " ")
+
+    else:
+        print("\nERROR: Please type a valid option.")
