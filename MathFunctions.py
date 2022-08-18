@@ -14,6 +14,7 @@ keepGoing = True
 
 # While cycle for the menu
 while keepGoing:
+    print("\n")
     print("--- What would you like to do? ---")
     print("1. Spread function.")
     print("2. Pseudorandom number generator.")
