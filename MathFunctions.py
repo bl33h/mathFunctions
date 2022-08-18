@@ -27,9 +27,10 @@ while keepGoing:
         for i in range(n):
             y = int(input("Enter the next value: "))
             arr.append(y)
-        divisor = 11
-        arr = list(map(lambda x: x / divisor, arr))
-        print(arr)
+        div = 11
+        arr = list(map(lambda x: x % div, arr))
+        finalArr = []
+        print(finalArr)
 
     # Second option || Pseudorandom number generator
     elif option == "2":
