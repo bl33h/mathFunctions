@@ -46,7 +46,7 @@ while keepGoing:
                         j += 1
                     else:
                         secondSet[j] = firstSet[j]
-                        print (secondSet)
+        print (secondSet)
 
     # Second option || Pseudorandom number generator
     if option == "2":
