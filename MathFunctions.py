@@ -33,11 +33,11 @@ while keepGoing:
         print(finalArr)
 
     # Second option || Pseudorandom number generator
-    elif option == "2":
-        m = int(input("Enter the module value (m): ")
-        a = int(input("Enter the multiplier value (a), it must be ≤2: ")
-        c = int(input("Enter the increase value (c): ")
-        s = int(input("Enter the seed value (s), it must be ≤0: ")
+    if option == "2":
+        m = int(input("Enter the module value (m): "))
+        a = int(input("Enter the multiplier value (a), it must be ≤2: "))
+        c = int(input("Enter the increase value (c): "))
+        s = int(input("Enter the seed value (s), it must be ≤0: "))
         print("\n")
 
     else:
