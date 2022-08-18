@@ -38,7 +38,16 @@ while keepGoing:
         a = int(input("Enter the multiplier value (a), it must be ≤2: "))
         c = int(input("Enter the increase value (c): "))
         s = int(input("Enter the seed value (s), it must be ≤0: "))
-        print("\n")
+        print ("\n")
+        def pseudorandomNumberGenerator(s, m, a, c, randomNums, numberOfRandoms):
+            randomNums[0] = s
+            numberOfRandoms = 5
+            randomNums = [0] * (numberOfRandoms)
+            for i in range(1, numberOfRandoms):
+                randomNums[i] = ((randomNums[i - 1] * a) + c) % m
+                pseudorandomNumberGenerator(s, m, a, c, randomNums, numberOfRandoms)
+            for i in randomNums:
+		        print(i, end = " ")
 
-    else:
-        print("\nERROR: Please type a valid option.")
+else:
+    print("\nERROR: Please type a valid option.")
