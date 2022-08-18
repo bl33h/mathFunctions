@@ -27,7 +27,7 @@ while keepGoing:
         for i in range(n):
             y = int(input("Enter the next value: "))
             arr.append(y)
-        div = 11
+        div = 12
         arr = list(map(lambda x: x % div, arr))
         finalArr = []
         print(finalArr)
