@@ -25,10 +25,15 @@ while keepGoing:
         arr = array ('i', [])
         n = int(input("Enter the length of the array: "))
         for i in range(n):
-            x = int(input("Enter the next value: "))
-            arr.append(x)
+            y = int(input("Enter the next value: "))
+            arr.append(y)
+        divisor = 11
+        arr = list(map(lambda x: x / divisor, arr))
+        print(arr)
+
+    # Second option || Pseudorandom number generator
+    elif option == "2":
         print("\n")
-    if option == "2":
-        print("\n")
+
     else:
         print("\nERROR: Please type a valid option.")
