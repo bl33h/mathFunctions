@@ -1,1 +1,1 @@
-# MathFunctions
+# mathFunctions
